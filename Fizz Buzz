@@ -1,0 +1,37 @@
+/*
+Write a program that outputs the string representation of numbers from 1 to n.
+
+But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+*/
+
+import java.util.*;
+class Solution {
+    public List<String> fizzBuzz(int n) {
+        
+        String fz = "Fizz";
+        String bz = "Buzz";
+        List<String> temp = new ArrayList<String>();
+        
+        for(int i=1;i<=n;i++){
+            String str = String.valueOf(i);
+            
+            if(i % 3 == 0 && i % 5 ==0){
+                temp.add(fz+bz);
+            }
+            
+            else if(i % 3 == 0){
+                temp.add(fz);
+            }
+            
+            else if(i % 5 ==0){
+                temp.add(bz);
+            }
+            
+            
+            else{
+            temp.add(str);
+            }
+        }
+        return temp;
+    }
+}
